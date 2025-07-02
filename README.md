@@ -2,7 +2,8 @@
  Organize your academic schedule effectively
 ## Project info
 
-**URL**: 
+**URL**: https://stdflow.pages.dev/
+**URL**: https://editinghero.github.io/studyflow/
 
 ## What technologies are used for this project?
 
