@@ -2,6 +2,7 @@
  Organize your academic schedule effectively
 ## Project info
 
+<<<<<<< HEAD
 **URL**: https://stdflow.pages.dev/
 **URL**: https://editinghero.github.io/studyflow/
 
