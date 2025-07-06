@@ -51,7 +51,7 @@ const backgroundImages = [
   'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
   'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
   'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+  'https://images.unsplash.com/photo-1441974231531-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
   'https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
   'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
   'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
@@ -80,7 +80,7 @@ const IndexContent = () => {
   const [selectedTopic, setSelectedTopic] = useState<StudyTopic | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [view, setView] = useState<'calendar' | 'overview'>('overview');
-  const [backgroundIndex, setBackgroundIndex] = useState(0);
+  const [backgroundIndex, setBackgroundIndex] = useState(8);
   const [prefilledDate, setPrefilledDate] = useState<Date | null>(null);
 
   // Initialize notifications
@@ -472,10 +472,9 @@ const IndexContent = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="glass-button hover:scale-105 transition-all duration-300 backdrop-blur-lg border-white/40 dark:border-gray-700/40 w-full lg:w-10 lg:h-10 lg:p-0"
+                    className="glass-button hover:scale-105 transition-all duration-300 backdrop-blur-lg border-white/40 dark:border-gray-700/40 w-10 h-10 p-0"
                   >
                     <Settings size={16} />
-                    <span className="lg:hidden ml-2">Data Settings</span>
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-48 glass-card backdrop-blur-xl border-white/40 dark:border-gray-700/40">
@@ -517,7 +516,7 @@ const IndexContent = () => {
             />
           </div>
           
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Button
               variant={view === 'overview' ? 'default' : 'outline'}
               onClick={() => setView('overview')}
