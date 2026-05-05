@@ -152,6 +152,7 @@ const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({
                         onClick={() => onViewSession(session)}
                         className="transition-all hover:scale-110 duration-300 text-muted-foreground hover:text-primary"
                         title="View Session Details"
+                        aria-label="View session details"
                       >
                         <Eye size={16} />
                       </button>
@@ -159,6 +160,7 @@ const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({
                         onClick={() => onEditTopic(session)}
                         className="transition-all hover:scale-110 duration-300 text-muted-foreground hover:text-primary"
                         title="Edit Topic"
+                        aria-label="Edit topic"
                       >
                         <Edit size={16} />
                       </button>
@@ -166,6 +168,7 @@ const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({
                         onClick={() => toggleCompletion(session.id, session.completed)}
                         className="transition-all hover:scale-110 duration-300"
                         title="Toggle Completion"
+                        aria-label="Toggle completion"
                       >
                         {session.completed ? (
                           <CheckCircle2 className="text-green-400 animate-glow" size={20} />
