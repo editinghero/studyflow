@@ -95,6 +95,7 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                   size="sm"
                   onClick={() => navigateMonth('prev')}
                   className="glass-button hover:scale-105 transition-all duration-300"
+                  aria-label="Previous month"
                 >
                   <ChevronLeft size={16} />
                 </Button>
@@ -103,6 +104,7 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                   size="sm"
                   onClick={() => navigateMonth('next')}
                   className="glass-button hover:scale-105 transition-all duration-300"
+                  aria-label="Next month"
                 >
                   <ChevronRight size={16} />
                 </Button>
@@ -172,6 +174,7 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                       }}
                       className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-1 rounded-full bg-primary/80 hover:bg-primary text-primary-foreground hover:scale-110 transform"
                       title="Add topic for this date"
+                      aria-label="Add topic for this date"
                     >
                       <Plus size={12} />
                     </button>
@@ -239,13 +242,17 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                               onClick={() => onViewSession(topic)}
                               className="text-muted-foreground hover:text-primary transition-colors"
                               title="View Session Details"
+                              aria-label="View session details"
                             >
                               <Eye size={16} />
                             </button>
                             
                             <Popover>
                               <PopoverTrigger asChild>
-                                <button className="text-muted-foreground hover:text-primary transition-colors">
+                                <button
+                                  className="text-muted-foreground hover:text-primary transition-colors"
+                                  aria-label="Calendar export options"
+                                >
                                   <ExternalLink size={16} />
                                 </button>
                               </PopoverTrigger>
@@ -266,6 +273,7 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                             <button
                               onClick={() => onEditTopic(topic)}
                               className="text-muted-foreground hover:text-primary transition-colors"
+                              aria-label="Edit topic"
                             >
                               <Edit size={16} />
                             </button>
@@ -273,6 +281,7 @@ const StudyCalendar: React.FC<StudyCalendarProps> = ({
                             <button
                               onClick={() => toggleTopicCompletion(topic.id, topic.completed)}
                               className="transition-colors hover:scale-110"
+                              aria-label="Toggle completion"
                             >
                               {topic.completed ? (
                                 <CheckCircle2 className="text-green-600" size={20} />

@@ -30,6 +30,7 @@ const ThemeSettings: React.FC = () => {
         variant="outline"
         size="icon"
         className="glass-effect hover:scale-105 transition-all duration-200"
+        aria-label="Toggle dark mode"
       >
         {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
       </Button>
@@ -40,6 +41,7 @@ const ThemeSettings: React.FC = () => {
             variant="outline"
             size="icon"
             className="glass-effect hover:scale-105 transition-all duration-200"
+            aria-label="Open theme settings"
           >
             <Palette size={18} />
           </Button>
@@ -63,6 +65,7 @@ const ThemeSettings: React.FC = () => {
                     <button
                       key={value}
                       onClick={() => setColorScheme(value)}
+                      aria-label={`Select ${name} color scheme`}
                       className={`flex items-center justify-between p-3 rounded-lg border transition-all hover:scale-[1.02] text-foreground ${
                         colorScheme === value 
                           ? 'border-primary bg-primary/10 scale-[1.02]' 
