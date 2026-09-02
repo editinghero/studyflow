@@ -9,9 +9,9 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
-    "postbuild": "cp dist/index.html dist/404.html"
+    "postbuild": "node -e \"require('fs').copyFileSync('dist/index.html', 'dist/404.html')\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -84,5 +84,6 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.19",
     "vite-plugin-pwa": "^0.17.5"
-  }
+  },
+  "packageManager": "pnpm@10.12.4"
 }
